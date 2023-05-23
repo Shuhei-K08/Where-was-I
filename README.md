@@ -7,20 +7,20 @@
 
 #使用技術
 - python3
--　MySQL
--　apache2
--　Wisgi
--　flask
--　Docker/Docker-compose
--　AWS 
-  -　VPC
-  -　EC2
+- MySQL
+- apache2
+- Wisgi
+- flask
+- Docker/Docker-compose
+- AWS 
+  - VPC
+  - EC2
   
 #機能一覧
--企業名の登録、閲覧
--担当者の登録、閲覧
--商談メモの作成、閲覧
--TodoListの追加、削除
+- 企業名の登録、閲覧
+- 担当者の登録、閲覧
+- 商談メモの作成、閲覧
+- TodoListの追加、削除
 
 - ユーザー登録、ログイン機能(devise)
 - 投稿機能
