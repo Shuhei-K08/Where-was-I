@@ -1,0 +1,48 @@
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1">
+    <link rel="stylesheet" href="static/companyInfo.css" type="text/css">
+    <title>企業一覧</title>
+</head>
+<h1>企業一覧</h1>
+
+<body>
+    <div>
+
+    </div>
+    <div class=block1>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% for list in lists %}
+        <div class="block2">
+            <div class="border">
+                <p class="date1">企業名： {{ list [1] }}</p>
+            </div>
+            <div class="border">
+                <tr><br>
+                    <td><a class="button1" href="{{url_for('listCompany',company_id=list[0])}}" role="button">詳細</a>
+                    </td>
+                    <td><a class="button1" href="{{url_for('deleteCompany',company_id=list[0])}}" role="button">削除</a>
+                    </td>
+                    <td>
+                </tr>
+            </div>
+        </div><br>
+        {% endfor %}
+        </form>
+        <a class="topButton1" href="/todolist.py/create_company">戻る</a>
+        <a class=topButton1 href="/todolist.py/top">トップページに戻る</a>
+    </div>
+</body>
+
+</html>

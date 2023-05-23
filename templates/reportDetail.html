@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='reportDetail.css')}}">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1">
+</head>
+
+</style>
+<title>商談メモ</title>
+
+<body>
+
+    <h1>商談メモ 閲覧</h1>
+    <div class="block">
+        <form action="{{url_for('reportDetail',report_id=report[0])}}" method="POST">
+            <div class="label">企業名</div>
+            <div class="select">{{ report [2] }}</div>
+            <div class="label">担当者名</div>
+            <div class="select">{{ report [3] }}</div>
+            <div class="label">日付</div>
+            <div class="select">{{ report [5] }}</div>
+            <div class="label">題名</div>
+            <div class="select">{{ report [1] }}</div>
+            <div class="label">内容</div>
+            <div class="content">{{ report [4] }}</div>
+
+            <a class="submitButton" href="{{url_for('updateReport',report_id=report[0])}}" role="button">編集</a><br>
+            <a class="redirectTop" href="/todolist.py/top">トップページに戻る</a>
+        </form>
+    </div>
+</body>
+
+</html>

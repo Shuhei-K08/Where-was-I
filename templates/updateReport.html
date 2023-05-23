@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='updateReport.css')}}">
+    <title>商談メモ</title>
+</head>
+
+</style>
+
+
+<body>
+
+    <h1>商談メモ 編集 </h1>
+    <form action="{{url_for('updateReport',report_id=report[0])}}" method="POST">
+
+        <div class="block">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+            <label>企業名</label>
+            <select name="company">
+                <option value="{{ report [2] }}" selected>{{ report [2] }}</option>
+                {% for company in companies %}
+                <option>{{ company [0] }}</option>
+                {% endfor %}
+            </select><br>
+            <label>担当者名</label>
+            <select name="name">
+                <option value="{{ report [3] }}" selected>{{ report [3] }}</option>
+                {% for get in gets %}
+                <option>{{ get [1] }}</option>
+                {% endfor %}
+            </select><br>
+            <label for="title">日付</label>
+            <input type="date" id="date" name='date' value="{{ report [5] }}"><br>
+            <label for="title">題名</label>
+            <input class=text1 type="text" id="title" name="title" value="{{ report [1] }}"><br>
+            <label for="content">内容</label>
+            <textarea id="content" name="content" rows="20" cols="40">{{ report [4] }}</textarea><br>
+            <button class="submitButton" type="submit">更新</button>
+            <a class="redirectTop" href="/todolist.py/top">トップページに戻る</a>
+        </div>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1">
+    <link rel="stylesheet" href="static/createInfo.css" type="text/css">
+    <title>顧客情報</title>
+</head>
+<h1>担当者の登録</h1>
+
+<body>
+
+    <div>
+        <form action="createInfo" method="POST">
+    </div>
+    <div class=block1>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        <p>企業名</p>
+        <select class="text" name="company">
+            <option value="">選択してください</option>
+            {% for company in companies %}
+            <option>{{ company [0] }}</option>
+            {% endfor %}
+        </select><br>
+        <label for="name">担当者名</label><br>
+        <input class="text" type="text" id="name" name="name"><br>
+        <label for="email">email</label><br>
+        <input class="text" type="email" id="email" name="email"><br>
+        <label for="tel">電話</label><br>
+        <input class="text" type="tel" id="tel" name="tel" placeholder="電話番号" pattern="\d{2,4}-?\d{2,4}-?\d{3,4}"><br>
+        <input class=submitButton type="submit" value="登録" />
+        </form><br>
+        <a class=topButton href="/todolist.py/top">トップページに戻る</a>
+        <a class="topButton" href="/todolist.py/create_company">戻る</a>
+
+    </div>
+</body>
+
+</html>

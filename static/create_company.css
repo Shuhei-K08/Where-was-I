@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+body {
+  width: 650px;
+  background-color: rgb(181, 224, 234);
+  color: rgb(104, 104, 104);
+}
+
+h1 {
+  height: 35px;
+  padding-top: 8px;
+  margin: 0px;
+  background-color: rgb(0, 180, 208);
+  border-radius: 20px 20px 0px 0px;
+  color: white;
+  box-shadow: 0px 0px 10px rgb(205, 205, 205);
+  text-align: center;
+  font-size: 20px;
+}
+
+h2 {
+  margin: 60px 0px 5px 20px;
+  font-size: 20px;
+}
+
+p {
+  margin: 0px;
+}
+
+.block1 {
+  height: 680px;
+  width: auto;
+  padding: 10px;
+  border-radius: 0px 0px 20px 20px;
+  box-shadow: 0px 0px 10px rgb(205, 205, 205);
+  background-color: rgb(243, 243, 243);
+  margin: 0px;
+}
+
+.companyList {
+  width: 600px;
+  height: 520px;
+  background-color: rgb(227, 227, 227);
+  border-radius: 10px;
+  margin: 0px 0px 10px 13px;
+  overflow-y: scroll;
+  padding: 15px 0px 5px 0px;
+}
+
+.company {
+  width: 545px;
+  height: auto;
+  text-decoration: none;
+  background-color: rgb(245, 248, 249);
+  box-shadow: 0px 0px 5px rgb(1, 147, 170);
+  border-radius: 10px;
+  margin: 0px 0px 8px 15px;
+  padding: 7px 12px;
+}
+
+.addButton {
+  width: 290px;
+  height: 30px;
+  padding: 10px 0px 0px 0px;
+  font-size: auto;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  background-color: rgb(245, 248, 249);
+  color: rgb(0, 180, 208);
+  box-shadow: 0px 0px 5px rgb(1, 147, 170);
+  border-radius: 10px;
+  font-size: 15px;
+  float: left;
+  border: 1px rgb(0, 180, 208);
+  margin: 6px 10px 0px 12px;
+}
+
+.deleteButton {
+  width: 50px;
+  height: 40px;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgb(165, 221, 233);
+  color: white;
+  box-shadow: 0px 2px 0px rgb(109, 153, 163);
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 4px;
+  margin-left: 5px;
+}
+
+.button {
+  margin-left: 450px;
+}
+
+.addButton:hover {
+  background: rgb(193, 224, 228);
+}
+
+.deleteButton:hover {
+  background: rgb(113, 152, 161);
+}
+
+.topButton {
+  width: auto;
+  padding: 2px;
+  color: rgb(0, 180, 208);
+  text-align: center;
+  background-color: transparent;
+  float: right;
+}
+
+.topButton:hover {
+  background: #afd9f1;
+}

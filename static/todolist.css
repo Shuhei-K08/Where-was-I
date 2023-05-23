@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+body {
+  background-color: rgb(181, 224, 234);
+  color: rgb(104, 104, 104);
+}
+
+h1 {
+  height: 35px;
+  padding: 8px 0px 0px 0px;
+  margin: 0;
+  background-color: rgb(0, 180, 208);
+  border-radius: 20px 20px 0px 0px;
+  color: white;
+  box-shadow: 0px 0px 10px rgb(205, 205, 205);
+  text-align: center;
+  font-size: 20px;
+}
+
+.block0 {
+  height: auto;
+  width: 650px;
+  padding: 5px;
+  float: left;
+  margin: 0px 0px 0px 30px;
+
+}
+
+.block1 {
+  height: 680px;
+  width: auto;
+  overflow-y: scroll;
+  padding: 10px;
+  border-radius: 0px 0px 20px 20px;
+  box-shadow: 0px 0px 10px rgb(205, 205, 205);
+  background-color: rgb(243, 243, 243);
+}
+
+.block2 {
+  width: 400px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 2px 2px 4px #9c9ea3;
+}
+
+.block3 {
+  height: auto;
+  width: auto;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 2px 2px 4px #9c9ea3;
+  padding: 10px;
+}
+
+.button1,
+.date1 {
+  float: left;
+
+}
+
+.button1 {
+  width: 40px;
+  height: auto;
+  padding: 2px;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  margin-left: 360px;
+  background-color: rgb(165, 221, 233);
+  color: white;
+  box-shadow: 0px 2px 0px rgb(109, 153, 163);
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.button1:hover {
+  background: rgb(113, 152, 161);
+}
+
+.button2 {
+  width: 300px;
+  height: 30px;
+  padding: 10px 0px 0px 0px;
+  font-size: auto;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  background-color: rgb(245, 248, 249);
+  color: rgb(0, 180, 208);
+  box-shadow: 0px 0px 5px rgb(1, 147, 170);
+  border-radius: 10px;
+  font-size: 15px;
+  float: left;
+  border: 1px rgb(0, 180, 208);
+  margin: 6px 8px 0px 0px;
+}
+
+.button2:hover {
+  background: rgb(193, 224, 228);
+}
+
+.addButton {
+  width: 40px;
+  height: auto;
+  padding: 2px;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  background-color: rgb(165, 221, 233);
+  color: white;
+  box-shadow: 0px 2px 0px rgb(109, 153, 163);
+  border-radius: 10px;
+  font-size: 14px;
+  border: 1px rgb(109, 153, 163);
+
+}
+
+.addButton:hover {
+  background: rgb(113, 152, 161);
+}
+
+.border {
+  height: 50px;
+  width: 620px;
+  padding-left: 10px;
+
+}
+
+.reportTitle {
+  padding: 2px;
+}
+
+.reportTitle:hover {
+  background: #afd9f1;
+}
+
+
+
+.todo1 {
+  height: auto;
+  width: auto;
+  clear: both;
+  margin: 8px;
+
+
+
+}
+
+.date1 {
+  height: auto;
+  width: 180px;
+  margin: 0px;
+}
+
+.tododate {
+  height: 30px;
+  width: 120px;
+  text-align: center;
+  background-color: rgb(245, 248, 249);
+  box-shadow: 0px 0px 5px rgb(1, 147, 170);
+  border-radius: 3px;
+  border: 1px rgb(0, 180, 208);
+  color: rgb(104, 104, 104);
+  margin: 10px 3px 0px 0px;
+}
+
+.tododate:hover {
+  background: #afd9f1;
+}
+
+.text1 {
+  height: 28px;
+  width: 425px;
+  background-color: rgb(245, 248, 249);
+  box-shadow: 0px 0px 5px rgb(1, 147, 170);
+  border-radius: 3px;
+  border: 1px rgb(0, 180, 208);
+  color: rgb(104, 104, 104);
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1">
+    <link rel="stylesheet" href="static/company.css" type="text/css">
+    <title>企業情報</title>
+</head>
+<h1>企業の登録</h1>
+
+<body>
+    <div class="block1">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+
+        <form action="company" method="POST">
+            <div class=flashes>
+                <label for="company">企業名 </label>
+                <input class="text" type="text" id="company" name="company">
+                <input class="button" type="submit" value="登録" />
+            </div>
+        </form><br>
+        <a class="topButton" href="/todolist.py/top">トップページに戻る</a>
+        <a class="topButton" href="/todolist.py/create_company">戻る</a>
+    </div>
+</body>

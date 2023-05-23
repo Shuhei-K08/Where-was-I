@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1">
+    <link rel="stylesheet" href="static/createReport.css" type="text/css">
+</head>
+
+</style>
+<title>商談メモ</title>
+
+<body>
+    <h1>商談メモ登録</h1>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    <div class="block">
+
+        <form action="createReport" method="POST">
+
+            <label>企業名</label>
+            <select name="company">
+                <option value="">選択してください</option>
+                {% for company in companies %}
+                <option>{{ company [0] }}</option>
+                {% endfor %}
+            </select>
+            <a class="addButton" href="company" role="button">＋ 企業登録</a><br>
+
+            <label>担当者名</label>
+            <select name="name">
+                <option value="">選択してください</option>
+                {% for get in gets %}
+                <option>{{ get [1] }}</option>
+                {% endfor %}
+            </select>
+            <a class="addButton" href="createInfo" role="button">＋ 担当者登録</a><br>
+
+            <label for="date">日時</label>
+            <input type="date" id="reportDate" name='reportDate'><br>
+
+            <label for="title">題名</label>
+            <input type="text" id="title" name="title"><br>
+
+            <label for="content">内容</label>
+            <textarea id="content" name="content" rows="20" cols="40"></textarea><br>
+
+            <label for="dueDate">ToDo</label>
+            <input type="date" id="todoDate" name="todoDate"><br>
+            <label for="task"></label>
+            <input type="text" id="task" name="task"><br>
+
+            <input class="submitButton" type="submit" value="登録">
+
+        </form>
+
+        <a class="redirectTop" href="/todolist.py/top">トップページに戻る</a>
+    </div>
+
+</body>
+
+</html>

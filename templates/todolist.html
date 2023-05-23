@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1">
+    <title>ToDoリスト</title>
+    <link rel="stylesheet" href="static/todolist.css" type="text/css">
+
+</head>
+
+</style>
+
+
+<body>
+
+
+    <div class="block0">
+        <h1>ToDo</h1>
+        <div class="block1">
+
+            <form action="top" method="POST">
+
+                <table>
+                    <div class="border">
+                        <input class="tododate" type="date" id="dete" name="date">
+                        <input class="text1" type="text" id="task" name="task">
+                        <label for="task"></label>
+                        <input class="addButton" type="submit" name="send" value="追加">
+                    </div>
+            </form>
+            <form action="todolist.py" method="POST">
+
+                {% for task in tasks %}
+                <div class="block3">
+                    <p class="date1">Due to {{ task [2] }}</p>
+                    <a class="button1" href="{{url_for('deleteTodo',todolist_id=task[0])}}" role="button">完了</a>
+                    <p class="todo1">{{ task [1] }}</p>
+                </div>
+                {% endfor %}
+                </table>
+        </div>
+        </form>
+    </div>
+    </div>
+    <div class="block0">
+        <h1>商談レポート</h1>
+        <div class="block1 ">
+            <table>
+                <form action="todolist.py" method="GET">
+                    <div class="border">
+                        <a class="button2" href="create_company" role="button">＋　企業情報を登録</a>
+                        <a class="button2" href="createReport" role="button">＋　商談メモ登録</a>
+                    </div>
+        </div>
+        {% for list in lists %}
+        <div class="block3">
+            <p class="date1">{{list[2]}}</p>
+            <a class='button1' href="{{url_for('deleteReport',listreport_id=list[0])}}" role="button">削除</a><br>
+            <div class='todo1'>
+                <a class="reportTitle" href="{{url_for('reportDetail',report_id=list[0])}}" role="button">
+                    {{list [1]}}</a>
+            </div>
+        </div>
+        {% endfor %}
+        <tr>
+            </table>
+
+            </form>
+    </div>
+    </div>
+</body>
+
+</html>
