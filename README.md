@@ -6,15 +6,15 @@
 #URL
 
 #使用技術
--python3
--MySQL
--apache2
--Wisgi
--flask
--Docker/Docker-compose
--AWS 
-  -VPC
-  -EC2
+- python3
+-　MySQL
+-　apache2
+-　Wisgi
+-　flask
+-　Docker/Docker-compose
+-　AWS 
+  -　VPC
+  -　EC2
   
 #機能一覧
 -企業名の登録、閲覧
